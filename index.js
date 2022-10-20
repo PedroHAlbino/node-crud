@@ -8,6 +8,10 @@ const conn = require('./db/conn')
 
 const Task = require('./models/Task')
 
+const tasksRoutes = require('./routes/tasksRoutes')
+
+app.use('/tasks', tasksRoutes)
+
 app.engine('handlebars', exphbs.engine())
 
 app.set('view engine', 'handlebars')
